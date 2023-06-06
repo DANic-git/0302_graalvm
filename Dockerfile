@@ -32,6 +32,6 @@ FROM scratch as final
 ENV PORT 8080
 WORKDIR /app
 COPY --from=build /usr/app/target/native.bin /app/native.bin
-EXPOSE 8080
+EXPOSE 8080/udp
 
 ENTRYPOINT ["/app/native.bin"]
